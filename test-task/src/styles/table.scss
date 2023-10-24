@@ -1,0 +1,50 @@
+.table {
+  .user {
+    display: flex;
+    margin: 10px;
+    background-color: #ae57578f;
+    height: 70px;
+    justify-content: space-between;
+
+    .edit {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      height: 40px;
+      width: 40px;
+      background-color: #ae57578f;
+      border-radius: 20px;
+    }
+
+    .name,
+    .id,
+    .adress,
+    .birth,
+    .email,
+    .phone {
+      position: relative;
+      top: 10px;
+      height: 50px;
+      background-color: #ffffff;
+      padding: 10px;
+      width: 18%;
+    }
+
+    .id {
+      width: 1.5%;
+      left: 10px;
+    }
+
+    .name {}
+
+    .email {}
+
+    .birth {}
+
+    .phone {}
+
+    .adress {
+      right: 10px;
+    }
+  }
+}

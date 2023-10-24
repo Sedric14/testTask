@@ -1,0 +1,75 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation-name: appear;
+  animation-duration: 300ms;
+
+  .field {
+    padding-top: 10px;
+    width: 600px;
+    height: 280px;
+    background: url("https://raw.githubusercontent.com/Sedric14/assets/main/wallpaper.jpg");
+    position: relative;
+    margin: 0 20px;
+    max-height: calc(100vh - 40px);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: -2px -2px 10px 2px black;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0px -2px 2px 1px black, inset 0px 2px 2px 1px white;
+    text-shadow: 1px 1px 3px black;
+
+    .inputEdit {
+      border: 2px solid aliceblue;
+      border-radius: 5px;
+      background-color: #ffffff18;
+      position: relative;
+      left: 100px;
+      top: 40px;
+      color: rgb(187, 211, 255);
+      font-size: 120%;
+      width: 400px;
+      height: 35px;
+      padding: 0 10px;
+    }
+
+    .buttonBlock {
+      position: relative;
+      top: 80px;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+
+      .buttonEdit,
+      .buttonCancel {
+        padding: 0;
+        position: relative;
+        color: aliceblue;
+        height: 50px;
+        width: 125px;
+        line-height: 50px;
+        font-size: 120%;
+        background-color: #ffffff00;
+        border-radius: 5px;
+        border: 3px solid aliceblue;
+      }
+    }
+  }
+}

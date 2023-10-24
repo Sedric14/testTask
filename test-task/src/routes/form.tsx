@@ -19,9 +19,11 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<Sign>();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  // const a = useAppSelector((state) => state.url);
   function onSubmit(data: Sign) {
     let newUrl: UrlState = { url: '' };
-    if (data.name === 'testuser' && data.password === 'testpassword123') {
+    if (data.login === 'testuser' && data.password === 'testpassword123') {
       newUrl = { url: logUser as unknown as string };
       dispatch(setUrl(newUrl));
       navigate('/table');
@@ -40,7 +42,7 @@ const Form = () => {
             className="input"
             type="text"
             placeholder="Enter your name"
-            {...register('name', {
+            {...register('login', {
               required: {
                 value: true,
                 message: 'Please enter your Name',
@@ -52,8 +54,8 @@ const Form = () => {
             })}
           />
         </label>
-        <p className={`form-control ${errors.name ? 'errDis' : 'errMess'}`}>
-          {errors.name?.message}
+        <p className={`form-control ${errors.login ? 'errDis' : 'errMess'}`}>
+          {errors.login?.message}
         </p>
         <label className="label">
           Password:
@@ -77,7 +79,7 @@ const Form = () => {
           {errors.password?.message}
         </p>
         <input className="submit" type="submit" value="SEND" />
-        <p className={`form-control ${errMess !== '' ? 'errDis' : 'errMess'}`}>{errMess}</p>
+        <p className={`form-control ${errMess !== '' ? 'errDis2' : 'errMess2'}`}>{errMess}</p>
       </form>
     </div>
   );

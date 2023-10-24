@@ -1,14 +1,17 @@
-const baseUrl = 'http://146.190.118.121/api/';
+const baseUrl = 'http://146.190.118.121/api/table';
 
 const logUser = async () => {
-  const response = await fetch(baseUrl, {
+  const resp = await fetch(baseUrl, {
     method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    // headers: {
+    //   'Content-Type': 'application/json',
+    // },
   });
-  const result = (await response.json()) as string;
-  return result;
+  // const resp = fetch('http://146.190.118.121/api/table')
+  //   .then((response) => response.json())
+  //   .then((data) => console.log(data));
+  // const result = await resp.json();
+  return resp;
 };
 
 export default logUser;
